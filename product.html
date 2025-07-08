@@ -1,51 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Camico | Products</title>
+  <link rel="stylesheet" href="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    .product-card:hover {
+      transform: scale(1.02);
+      transition: 0.3s ease;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-banner {
+      background: url('images/fabric.jpeg') center center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+  </style>
 </head>
 <body>
-    <header class="p-3 mb-3 border-bottom">
-         <div class="container"> 
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> 
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"> 
-                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-bag-heart" viewBox="0 0 16 16" >
-  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-</svg> <p> </p>
-                 </a> 
-                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                     <li><a href="index.html" class="nav-link px-2 link-secondary">Overview</a></li> 
-                     <li><a href="features.html" class="nav-link px-2 link-body-emphasis">Features</a></li> 
-                     <li><a href="product.html" class="nav-link px-2 link-body-emphasis">Products</a></li> 
-                     <li><a href="Contact.html" class="nav-link px-2 link-body-emphasis">Contact Us</a></li> 
-                    </ul> <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                         <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                         </form> 
-                         <div class="dropdown text-end"> 
-                            <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> 
-                                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                             </a> 
-                             
-                             <ul class="dropdown-menu text-small">
-                                 <li><a class="dropdown-item" href="#">Cart</a></li> 
-                                 <li><a class="dropdown-item" href="#">Settings</a></li> 
-                                 <li><a class="dropdown-item" href="#">Profile</a></li>
-                                
-                                  <li><hr class="dropdown-divider"></li> <li><a class="dropdown-item" href="#">Sign out</a></li>
-                                 </ul> </div> </div> </div> </header>
-                                 
 
+  <!-- Header/Navbar -->
+  <header class="p-3 border-bottom bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between">
+        <a href="index.html" class="navbar-brand d-flex align-items-center text-white text-decoration-none">
+          <i class="bi bi-bag-heart fs-4 me-2"></i>
+          <strong>Camico</strong>
+        </a>
+        <ul class="nav">
+          <li><a href="index.html" class="nav-link text-white">Home</a></li>
+          <li><a href="product.html" class="nav-link text-white">Products</a></li>
+          <li><a href="cart.html" class="nav-link text-white">Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner text-center">
+    <h1 class="display-4 fw-bold">Explore Our Jerseys</h1>
+  </section>
+
+  <!-- Product Filter/Search -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Search jerseys...">
+        </div>
+        <div class="col-md-6 text-md-end mt-2 mt-md-0">
+          <select class="form-select w-auto d-inline-block">
+            <option selected>Sort by</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="new">Newest</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+       <div class="row g-4">
+  <!-- Product Card Template -->
+  <div class="col-md-3">
+    <div class="card product-card h-100 text-center">
+      <img src="images/1f069354-0cfd-4757-8e51-aa81dfaec1f2.jpeg" class="card-img-top" alt="Single Jersey" style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Single Jersey</h5>
+        <p class="card-text">$29.99</p>
+        <button class="btn btn-primary add-to-cart" data-name="Single Jersey" data-price="29.99">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card product-card h-100 text-center">
+      <img src="images/dac4ab2e-5816-445b-a594-a3f5a8da29e6.jpeg" class="card-img-top" alt="Stretch Jersey" style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Stretch Jersey</h5>
+        <p class="card-text">$49.99</p>
+        <button class="btn btn-primary add-to-cart" data-name="Stretch Jersey" data-price="49.99">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card product-card h-100 text-center">
+      <img src="images/sublimation jersey degsin order now 01872533898.jpeg" class="card-img-top" alt="Interlock Jersey" style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Interlock Jersey</h5>
+        <p class="card-text">$19.99</p>
+        <button class="btn btn-primary add-to-cart" data-name="Interlock Jersey" data-price="19.99">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card product-card h-100 text-center">
+      <img src="images/download (28).jpeg" class="card-img-top" alt="Classic Red Jersey" style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Classic Red Jersey</h5>
+        <p class="card-text">$25.00</p>
+        <button class="btn btn-primary add-to-cart" data-name="Classic Red Jersey" data-price="25.00">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  
+   <div class="col-md-3">
+    <div class="card product-card h-100 text-center">
+      <img src="images/Concept Kit - Japan - Ke_ Narts.jpeg" class="card-img-top" alt="Classic Red Jersey" style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Classic Red Jersey</h5>
+        <p class="card-text">$25.00</p>
+        <button class="btn btn-primary add-to-cart" data-name="Classic Red Jersey" data-price="25.00">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card product-card h-100 text-center">
+      <img src="images/Brooks RUN VISIBLE SHORT SLEEVE 2_0 - Sports….jpeg" class="card-img-top" alt="Classic Red Jersey" style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Classic Red Jersey</h5>
+        <p class="card-text">$25.00</p>
+        <button class="btn btn-primary add-to-cart" data-name="Classic Red Jersey" data-price="25.00">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card product-card h-100 text-center">
+      <img src="images/Just to display the Company Logo.jpeg" class="card-img-top" alt="Classic Red Jersey" style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Classic Red Jersey</h5>
+        <p class="card-text">$25.00</p>
+        <button class="btn btn-primary add-to-cart" data-name="Classic Red Jersey" data-price="25.00">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card product-card h-100 text-center">
+      <img src="images/Want to make a jersey with an attractive and….jpeg" class="card-img-top" alt="Classic Red Jersey" style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Classic Red Jersey</h5>
+        <p class="card-text">$25.00</p>
+        <button class="btn btn-primary add-to-cart" data-name="Classic Red Jersey" data-price="25.00">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card product-card h-100 text-center">
+      <img src="images/大きいサイズメンズ デジタル柄 コントラストカラー Vネック 半袖 カジュアルTシャツ マルチカラー….jpeg" class="card-img-top" alt="Classic Red Jersey" style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Classic Red Jersey</h5>
+        <p class="card-text">$25.00</p>
+        <button class="btn btn-primary add-to-cart" data-name="Classic Red Jersey" data-price="25.00">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+       
+      
+
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p>&copy; 2025 Camico. All rights reserved.</p>
+  <footer class="footer text-white text-center py-4 mt-5 bg-dark">
+    <div class="container">
+      <p class="mb-2">&copy; 2025 Camico. All rights reserved.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="#" class="text-white fs-4" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white fs-4" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white fs-4" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="text-white fs-4" title="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

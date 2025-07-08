@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart | Camico</title>
+  <link rel="stylesheet" href="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css"/>
+  <style>
+    .cart-table th, .cart-table td {
+      vertical-align: middle;
+    }
+    .cart-total {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header/Navbar (same as homepage for consistency) -->
+<header class="p-3 border-bottom bg-dark">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-between">
+      <a href="index.html" class="navbar-brand d-flex align-items-center text-white text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-bag-heart" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+        </svg>
+        <strong>Camico</strong>
+      </a>
+
+      <ul class="nav col-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="index.html" class="nav-link px-3 text-white">Home</a></li>
+        <li><a href="product.html" class="nav-link px-3 text-white">Products</a></li>
+        <li><a href="cart.html" class="nav-link px-3 text-white">Cart</a></li>
+        <li><a href="contact.html" class="nav-link px-3 text-white">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- Cart Content -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">Your Shopping Cart</h2>
+
+    <div class="table-responsive mb-4">
+      <table class="table table-bordered cart-table">
+        <thead class="table-light">
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th style="width: 120px;">Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- Sample row (can be dynamically added with JS) -->
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <img src="images/1f069354-0cfd-4757-8e51-aa81dfaec1f2.jpeg" alt="jersey" width="60" class="me-3 rounded">
+                Single Jersey
+              </div>
+            </td>
+            <td>$29.99</td>
+            <td><input type="number" value="1" class="form-control form-control-sm" /></td>
+            <td>$29.99</td>
+            <td><button class="btn btn-sm btn-outline-danger">X</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row justify-content-end">
+      <div class="col-md-4">
+        <div class="cart-total">
+          <h5 class="mb-3">Cart Summary</h5>
+          <p>Subtotal: <strong>$29.99</strong></p>
+          <p>Shipping: <strong>$5.00</strong></p>
+          <hr />
+          <p>Total: <strong>$34.99</strong></p>
+          <a href="checkout.html" class="btn btn-primary w-100 mt-3">Proceed to Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-white text-center py-4 mt-5 bg-dark">
+  <div class="container">
+    <p class="mb-0">&copy; 2025 Camico. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

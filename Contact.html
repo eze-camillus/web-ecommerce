@@ -1,51 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Camico</title>
+  <link rel="stylesheet" href="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css"/>
+  <style>
+    .contact-header {
+      background-color: #0d6efd;
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .contact-header h1 {
+      font-weight: bold;
+    }
+    .contact-form {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    .contact-info i {
+      margin-right: 10px;
+      color: #0d6efd;
+    }
+  </style>
 </head>
 <body>
-    <header class="p-3 mb-3 border-bottom">
-         <div class="container"> 
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> 
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"> 
-                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-bag-heart" viewBox="0 0 16 16" >
-  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-</svg> <p> </p>
-                 </a> 
-                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                     <li><a href="index.html" class="nav-link px-2 link-secondary">Overview</a></li> 
-                     <li><a href="features.html" class="nav-link px-2 link-body-emphasis">Features</a></li> 
-                     <li><a href="product.html" class="nav-link px-2 link-body-emphasis">Products</a></li> 
-                     <li><a href="Contact.html" class="nav-link px-2 link-body-emphasis">Contact Us</a></li> 
-                    </ul> <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                         <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                         </form> 
-                         <div class="dropdown text-end"> 
-                            <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> 
-                                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                             </a> 
-                             
-                             <ul class="dropdown-menu text-small">
-                                 <li><a class="dropdown-item" href="#">Cart</a></li> 
-                                 <li><a class="dropdown-item" href="#">Settings</a></li> 
-                                 <li><a class="dropdown-item" href="#">Profile</a></li>
-                                
-                                  <li><hr class="dropdown-divider"></li> <li><a class="dropdown-item" href="#">Sign out</a></li>
-                                 </ul> </div> </div> </div> </header>
-                                
 
+  <!-- Header/Navbar -->
+  <header class="p-3 border-bottom bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between">
+        <a href="index.html" class="navbar-brand text-white text-decoration-none">
+          <strong>Camico</strong>
+        </a>
+        <ul class="nav">
+          <li><a href="index.html" class="nav-link text-white">Home</a></li>
+          <li><a href="product.html" class="nav-link text-white">Products</a></li>
+          <li><a href="cart.html" class="nav-link text-white">Cart</a></li>
+          <li><a href="contact.html" class="nav-link text-white active">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Header -->
+  <section class="contact-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Reach out to us using the form below or visit our office.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="contact-form">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h4>Store Information</h4>
+          <div class="contact-info mb-4">
+            <p><i class="bi bi-geo-alt-fill"></i> 123 Stadium Road, Accra, Ghana</p>
+            <p><i class="bi bi-telephone-fill"></i> +233 55 000 0000</p>
+            <p><i class="bi bi-envelope-fill"></i> info@camico.com</p>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.8390321104656!2d-0.19196358523551414!3d5.614818895921524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfe3fbd021111f1%3A0x2b2b7e4585de0c26!2sAccra%20Sports%20Stadium!5e0!3m2!1sen!2sgh!4v1616619482503!5m2!1sen!2sgh"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p>&copy; 2025 Camico. All rights reserved.</p>
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-1">&copy; 2025 Camico. All rights reserved.</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
     </div>
   </footer>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
